@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form with Background Image</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Basic styling for the entire form */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./pieces-blue-stationery.jpg'); 
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Centering the image */
+            overflow: hidden; /* Prevent scrolling due to background */
+        }
+
+        h1 {
+            text-align: center;
+            font-family: cursive;
+            margin-top: 20px;
+            color: rgb(219, 197, 215);
+        }
+
+        form {
+            max-width: 400px;
+            margin: 1 auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: rgba(184, 225, 239, 0.8); /* Semi-transparent background for readability */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1; /* Place above the background */
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form .option-size {
+            font-size: 20px;
+            font-family: cursive;
+             color: rgb(28, 4, 55);
+        }
+         form .radio-size:hover{
+          width: 30px;
+            height: 20px;
+             border: 2px solid rgb(147, 188, 24);
+          border-radius: 50%;
+          transform: scale(1.2);
+}
+
+        form .email-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        form .email-icon {
+            height: 50px; /* Adjust as needed */
+            margin-right: 4px;
+        }
+
+        form .email-input {
+            flex: 1;
+            padding: 8px;
+            font-size: 14px; /* Adjust as needed */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form p {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+
+        form select {
+            display: inline-block;
+            padding: 8px;
+            font-size: 14px; /* Adjust as needed */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            flex: 1; /* Expand to fill remaining space */
+        }
+
+        form button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #a0b4ca;
+        }
+    </style>
+</head>
+<body>
+    <h1>REGISTRATION FORM</h1>
+    <hr>
+    <form>
+        <label class="option-size">
+            <input type="radio" value="personal" name="organization" class="radio-size"> Personal
+        </label>
+        <label class="option-size">
+            <input type="radio" value="company" name="organization" class="radio-size"> Company
+        </label>
+        
+        <div class="email-container">
+            <img src="./email.png" class="email-icon">
+            <input type="text" class="email-input" placeholder="Email">
+        </div>
+        <div class="email-container">
+            <img src="./user.png" class="email-icon">
+            <input type="text" class="email-input" placeholder="Username">
+        </div>
+        <div class="email-container">
+            <img src="./calendar (1).png" class="email-icon">
+            <input type="date" class="email-input">
+        </div>
+        <label for="city">Select your City name:</label>
+        <select id="city" name="city">
+            <option value="Delhi">Delhi</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Gurgaon">Gurgaon</option>
+            <option value="Pune">Pune</option>
+        </select>
+        <button type="button" onclick="showThankYou()">Submit</button>
+    </form>
+
+    <script>
+        function showThankYou() {
+            alert("Thank you so much :)");
+            alert("Minku's greetings"); // Show an alert message
+        }
+    </script>
+</body>
+</html>
